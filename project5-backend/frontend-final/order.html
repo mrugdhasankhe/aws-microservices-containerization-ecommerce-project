@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="indexproduct.html">Home</a>
+    <a href="cart.html">Cart</a>
+</nav>
+
+<h1>Order Placed Successfully 🎉</h1>
+
+<div id="order-details"></div>
+
+<br>
+<a href="indexproduct.html">Back to Shop</a>
+
+<script>
+    const order = JSON.parse(localStorage.getItem("latestOrder"));
+    const container = document.getElementById("order-details");
+
+    if (!order) {
+        container.innerHTML = "<p>No order found.</p>";
+    } else {
+        let html = "<h2>Order Summary</h2>";
+
+        let total = 0;
+
+        order.items.forEach(item => {
+            const subtotal = item.price * item.quantity;
+            total += subtotal;
+
+            html += `
+                <div class="card">
+                    <h3>${item.name}</h3>
+                    <p>Price: ₹${item.price}</p>
+                    <p>Quantity: ${item.quantity}</p>
+                    <p>Subtotal: ₹${subtotal}</p>
+                </div>
+            `;
+        });
+
+        html += `
+            <h3>Total Amount: ₹${order.total_amount}</h3>
+            <p>Status: ${order.status}</p>
+            <p>Order ID: ${order.order_id}</p>
+        `;
+
+        container.innerHTML = html;
+    }
+</script>
+
+</body>
+</html>

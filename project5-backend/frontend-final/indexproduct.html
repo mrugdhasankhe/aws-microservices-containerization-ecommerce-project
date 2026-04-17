@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="indexproduct.html">Home</a>
+    <a href="cart.html">Cart</a>
+</nav>
+
+<h1>My Shop</h1>
+
+<div id="categories" class="grid">
+    <div class="card" onclick="showCategory('laptops')">
+        <img src="./Laptops.jpeg" alt="Laptops">
+        <h2>Laptops</h2>
+    </div>
+
+    <div class="card" onclick="showCategory('phones')">
+        <img src="./Phones.jpg" alt="Phones">
+        <h2>Phones</h2>
+    </div>
+</div>
+
+<div id="products"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
