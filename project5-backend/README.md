@@ -1,4 +1,4 @@
-# AWS Microservices E-Commerce Application (ECS + S3 + RDS + DynamoDB)
+# AWS E-Commerce Application using Microservices Containerization  (ECS + S3 + RDS + DynamoDB)
 
 ## Project Overview
 
