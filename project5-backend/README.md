@@ -596,7 +596,7 @@ So actual setup:
 - 2 EC2 instances (across 2 AZs)
 - 1 task per service
 
-👉 Meaning:
+Meaning:
 - Infrastructure is highly available (instance level)
 - But only one container is running per service
 
@@ -623,7 +623,7 @@ Current setup:
 - 3 services (product, cart, order)
 - Each service → 1 task
 
-👉 Important:
+Important:
 - ECS places tasks based on **CPU and memory availability**
 - It does **NOT guarantee equal distribution**
 
