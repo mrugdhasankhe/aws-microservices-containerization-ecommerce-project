@@ -247,7 +247,7 @@ Each service is chosen based on its strengths and role in the system.
 
  **S3 Static Website Configuration**
 
-![S3](screenshots/S3.png)
+![S3](S3.png)
 
 ---
 
@@ -266,7 +266,7 @@ Each service is chosen based on its strengths and role in the system.
 
  **ECS Services Running**
 
-![ECS Services](screenshots/ECS-services.png)
+![ECS Services](ECS-services.png)
 
 ---
 
@@ -281,7 +281,7 @@ Each service is chosen based on its strengths and role in the system.
 
  **EC2 Instances**
 
-![EC2 Instances](screenshots/EC2_instances.png)
+![EC2 Instances](EC2_instances.png)
 
 ---
 
@@ -295,7 +295,7 @@ Each service is chosen based on its strengths and role in the system.
 
  **ALB Routing Rules**
 
-![ALB Rules](screenshots/ALB-rules.png)
+![ALB Rules](ALB-rules.png)
 
 ---
 
@@ -311,7 +311,7 @@ Each service is chosen based on its strengths and role in the system.
 
  **RDS Configuration**
 
-![RDS](screenshots/RDS_for-product-and-order.png)
+![RDS](RDS_for-product-and-order.png)
 
 ---
 
@@ -327,7 +327,7 @@ Each service is chosen based on its strengths and role in the system.
 
  **DynamoDB Table**
 
-![DynamoDB](screenshots/DynamoDB_for-cart.png)
+![DynamoDB](DynamoDB_for-cart.png)
 
 ---
 
@@ -342,7 +342,7 @@ Each service is chosen based on its strengths and role in the system.
 
  **ECR Repositories**
 
-![ECR](screenshots/ECR.png)
+![ECR](ECR.png)
 
 ---
 
@@ -355,7 +355,7 @@ Each service is chosen based on its strengths and role in the system.
 
  **Auto Scaling Group**
 
-![ASG](screenshots/ASG.png)
+![ASG](ASG.png)
 
 ---
 
@@ -369,7 +369,7 @@ Each service is chosen based on its strengths and role in the system.
 
  **Launch Template**
 
-![Launch Template](screenshots/Launch-Template.png)
+![Launch Template](Launch-Template.png)
 
 ---
 
@@ -383,7 +383,7 @@ Each service is chosen based on its strengths and role in the system.
 
  **IAM Roles**
 
-![IAM Roles](screenshots/IAM-roles.png)
+![IAM Roles](IAM-roles.png)
 
 ---
 
@@ -397,7 +397,7 @@ Each service is chosen based on its strengths and role in the system.
 
  **Security Groups**
 
-![Security Groups](screenshots/Security_Groups.png)
+![Security Groups](Security_Groups.png)
 
 ---
 
@@ -410,7 +410,7 @@ Each service is chosen based on its strengths and role in the system.
 
  **Target Group**
 
-![Target Group](screenshots/Target-group.png)
+![Target Group](Target-group.png)
 
 ---
 
@@ -514,7 +514,7 @@ This architecture follows **best practices**:
 
  **VPC, Subnets & Route Configuration**
 
-![VPC Architecture](screenshots/vpc_subnets_route-table.png)
+![VPC Architecture](vpc_subnets_route-table.png)
 
 ---
 
@@ -563,7 +563,7 @@ Each microservice (Product, Cart, Order) is:
 
  **ECS Task Definition**
 
-![Task Definition](screenshots/Task-definition.png)
+![Task Definition](Task-definition.png)
 
 ---
 
@@ -576,7 +576,7 @@ Each microservice (Product, Cart, Order) is:
 
  **ECS Services**
 
-![ECS Services](screenshots/ECS-services.png)
+![ECS Services](ECS-services.png)
 
 ---
 
@@ -597,7 +597,7 @@ So actual setup:
 - 2 EC2 instances (across 2 AZs)
 - 1 task per service
 
-👉 Meaning:
+Meaning:
 - Infrastructure is highly available (instance level)
 - But only one container is running per service
 
@@ -624,7 +624,7 @@ Current setup:
 - 3 services (product, cart, order)
 - Each service → 1 task
 
-👉 Important:
+Important:
 - ECS places tasks based on **CPU and memory availability**
 - It does **NOT guarantee equal distribution**
 
@@ -662,7 +662,7 @@ These tests confirm that all components — S3, ALB, ECS services, and databases
 
  **S3 Static Website Access**
 
-![S3 Test](screenshots/Test-static-s3-site-access.png)
+![S3 Test](Test-static-s3-site-access.png)
 
 ---
 
@@ -673,7 +673,7 @@ These tests confirm that all components — S3, ALB, ECS services, and databases
 
  **Frontend Product Category**
 
-![Frontend Products](screenshots/Test-frontend-Laptops-category.png)
+![Frontend Products](Test-frontend-Laptops-category.png)
 
 ---
 
@@ -684,11 +684,11 @@ These tests confirm that all components — S3, ALB, ECS services, and databases
 
  **Adding Laptop to Cart**
 
-![Add Laptop](screenshots/Test-adding-to-cart-Laptop.png)
+![Add Laptop](Test-adding-to-cart-Laptop.png)
 
  **Adding Phone to Cart**
 
-![Add Phone](screenshots/Test-adding-to-cart-Phone.png)
+![Add Phone](Test-adding-to-cart-Phone.png)
 
 ---
 
@@ -700,7 +700,7 @@ These tests confirm that all components — S3, ALB, ECS services, and databases
 
  **Cart Items and Total**
 
-![Cart Total](screenshots/Test-card-items_total-order.png)
+![Cart Total](Test-card-items_total-order.png)
 
 ---
 
@@ -713,7 +713,7 @@ These tests confirm that all components — S3, ALB, ECS services, and databases
 
  **After Placing Order**
 
-![Order Placed](screenshots/Test-after-placing-order.png)
+![Order Placed](Test-after-placing-order.png)
 
 ---
 
@@ -724,7 +724,7 @@ These tests confirm that all components — S3, ALB, ECS services, and databases
 
  **Orders Retrieved from RDS**
 
-![Orders RDS](screenshots/Test-Orders-Retrieved-from-RDS-via-ALB-Endpoint.png)
+![Orders RDS](Test-Orders-Retrieved-from-RDS-via-ALB-Endpoint.png)
 
 ---
 
